@@ -1,0 +1,35 @@
+<p>personal details</p>
+
+
+<ul *ngIf="isshow">
+
+    
+    <ng-container *ngFor="let list of lists; let i=index" >
+        <li>
+            <div style="color: green; font-size: 22px;">{{i + 1}}</div> 
+             fristname = {{ list.FirstName | uppercase }} <br>
+             lastname = {{ list.LastName }} <br>
+             age = {{ list.Age }} <br>
+             place = {{ list.Place }} <br>
+             Salary = {{list.salary | currency:"INR"}}
+         </li> 
+    </ng-container>
+
+
+</ul>
+<button (click)="isshow = !isshow">
+    
+    <ng-container  *ngIf="isshow">hide list</ng-container>
+    <ng-container *ngIf="!isshow">show list</ng-container>
+</button> <br> <br>
+
+<img src="{{imgsrc}}" alt="img" width="10%"> <br><br>
+
+<button [disabled]="isdisable" (click)="disable()">click to disable button</button>  <br><br>
+
+<!-- two way binding  -->
+
+<label for="">two way binding</label> <br>
+<input type="text" [(ngModel)]="yourtext"> <br>
+<div>{{yourtext}}</div> <br>
+

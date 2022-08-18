@@ -25,6 +25,7 @@ tsc main.ts
 
 ## Variables
 ```sh
+
 var number =1;
 
 
