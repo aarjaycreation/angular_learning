@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 interface list{
   FirstName:string 
@@ -73,9 +74,22 @@ isshow: boolean = true;
 // }
 
 
+// counter 
+countvalues:number = 0 ;
+count(type:string){
+  type === 'add' ?
+  this.countvalues ++
+  : this.countvalues --
+}
 
+// form 
 
+result:any = {};
+getdata(data:NgForm){
+  console.log(data);
+this.result=data;
 
+}
 
 
   constructor() { }

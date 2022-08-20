@@ -93,3 +93,34 @@ module intro
 
 
 
+## 18 august 2022
+code - https://github.com/aarjaycreation/angular_learning/tree/master/src/app/My-Component/practice
+hello sir
+today I covered this topics:-
+property binding 
+event binding
+two way binding
+directive
+[
+    *ngif
+    ngfor
+]
+
+## 19 august 2022
+hello sir
+today I covered this topics:-
+tamplate refrance variable
+ngswitch 
+pipes
+functions 
+events
+get input values
+
+## 20 august 2022
+counter 
+basic rule of style 
+header 
+basic form 
+
+
+

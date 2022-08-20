@@ -1,0 +1,183 @@
+/**------------------------------------------------------------------------
+ *                           HEADER
+ *------------------------------------------------------------------------**/
+                        
+                        .header {
+                            background-color: var(--body-color);
+                            bottom: 0;
+                            position: fixed;
+                            width: 100%;
+                            z-index: 999;
+                        }
+                        
+                        .scroll-header {
+                            box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.15);
+                        }
+                        
+                        .nav {
+                            align-items: center;
+                            display: flex;
+                            height: 3rem;
+                            justify-content: space-between;
+                            max-width: 968px;
+                        }
+                        
+                        .nav__logo {
+                            color: var(--title-color);
+                            font-weight: var(--font-medium);
+                            font-size: var(--h2-font-size);
+                        }
+                        
+                        .nav__btns {
+                            align-items: center;
+                            display: flex;
+                            fill: var(--title-color);
+                        }
+                        
+                        .show-menu {
+                            bottom: 0;
+                        }
+                        
+                        .nav__list {
+                            grid-template-columns: repeat(3, 1fr);
+                            /* gap: 2rem; */
+                        }
+                        
+                        .nav__link {
+                            align-items: center;
+                            color: var(--title-color);
+                            display: flex;
+                            flex-direction: column;
+                            fill: var(--title-color);
+                            font-weight: var(--font-medium);
+                        }
+                        
+                        .active-link {
+                            color: var(--first-color);
+                            fill: var(--first-color);
+                        }
+                        
+                        .nav__close {
+                            fill: var(--first-color);
+                            cursor: pointer;
+                            position: absolute;
+                            right: 1.3rem;
+                        }
+                        /*=== Dropdown ===*/
+                        
+                        .dropdown__link {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                       
+                        
+                        .dropdown__icon {
+                            font-size: 1.3rem;
+                            transition: .5s;
+                        }
+                        
+                        .dropdown__menu {
+                            margin: 1rem 0 0 1rem;
+                            display: none;
+                        }
+                        
+                        .dropdown__item {
+                            margin: 1rem 0;
+                        }
+                        
+                        .dropdown:hover>.dropdown__menu {
+                            display: block;
+                        }
+                        
+                        .dropdown:hover .dropdown__icon {
+                            transform: rotate(180deg);
+                        }
+                        
+                         /* Extra small devices (phones, 600px and down) */
+                        
+                         @media only screen and (max-width: 750px) {
+                            .dropdown__link {
+                                display: none;
+                            }
+                        }
+
+                        
+                        @media screen and (min-width: 768px) {
+                            .dropdown {
+                                position: relative;
+                            }
+                            .dropdown__menu {
+                                position: fixed;
+                                margin: -16px;
+                                top: calc(var(--header-height) + 1rem);
+                                padding: .5rem 1.5rem;
+                                box-shadow: 0 8px 24px hsla(228, 66%, 45%, .1);
+                                border-radius: .5rem;
+                                background-color: var(--body-color);
+                            }
+                            .dropdown__item {
+                                margin: .5rem 0;
+                            }
+                        }
+
+
+                        @media screen and (max-width: 767px) {
+                            .nav__menu {
+                                background-color: var(--body-color);
+                                border-radius: 1.5rem 1.5rem 0 0;
+                                box-shadow: 0 -3px 3px 1px rgba(48, 48, 48, 0.15);
+                                bottom: -100%;
+                                left: 0;
+                                padding: 2rem 1.5rem 3rem;
+                                position: fixed;
+                                transition: 0.3s;
+                                width: 100%;
+                            }
+                            .show-menu {
+                                bottom: 0;
+                            }
+                        }
+                        
+                        @media screen and (min-width: 768px) {
+                            .nav {
+                                height: calc(var(--header-height) + 1.5rem);
+                                column-gap: 1rem;
+                            }
+                            .nav--btn {
+                                display: none;
+                            }
+                            .nav__list {
+                                display: flex;
+                                gap: 2rem;
+                            }
+                            .header {
+                                bottom: initial;
+                                top: 0;
+                            }
+                            .container {
+                                margin-left: auto;
+                                margin-right: auto;
+                                align-items: center;
+                            }
+                            .home__scroll {
+                                margin-left: 2.5rem;
+                            }
+                            .nav__toggle {
+                                display: none;
+                            }
+                            .nav__close {
+                                display: none;
+                            }
+                            .ptito {
+                                margin: 0 1.5rem;
+                            }
+                            .section {
+                                padding: 6rem 0 2rem;
+                            }
+                            .section__portfolio {
+                                padding: 8rem 0 8em;
+                            }
+                        }
+                        
+                      

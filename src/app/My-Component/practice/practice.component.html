@@ -33,3 +33,24 @@
 <input type="text" [(ngModel)]="yourtext"> <br>
 <div>{{yourtext}}</div> <br>
 
+<!-- counter  -->
+<button (click)="count('sub')">--</button><h1>{{countvalues}}</h1><button (click)="count('add')">++</button>
+
+  <!-- form  -->
+  <h1>form </h1>
+  <form #myform="ngForm" (ngSubmit)="getdata(myform.value)">
+    <input type="text" ngModel placeholder="name" name="name"> <br>
+    <input type="text" ngModel placeholder="email" name="email"> <br>
+    <input type="text" ngModel placeholder="phone" name="phone"> <br>
+    <input type="text" ngModel placeholder="mobile" name="mobile">
+    <button>submit</button>
+  </form>
+
+  <!-- result -->
+  <h1>show result</h1>
+  <ul>
+    <li>{{result.name}}</li>
+    <li>{{result.email}}</li>
+    <li>{{result.phone}}</li>
+    <li>{{result.mobile}}</li>
+  </ul>
